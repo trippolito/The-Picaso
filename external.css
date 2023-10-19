@@ -6,21 +6,21 @@ body>header {
   display: flex;
   justify-content: center;
   font-size: 60px;
-  font-family: fantasy;
+  font-family: fantasy, cursive;
   margin-top: 1cm;
-
 }
 
 .canvas {
   display: flex;
   flex-wrap: wrap;
-  height: 50%;
+  height: 50vh;
   background-color: white;
   margin-left: 25%;
   margin-right: 25%;
   margin-top: 1cm;
   border: 10px solid burlywood;
   position: relative;
+  overflow: hidden;
 }
 
 .square {
@@ -33,26 +33,103 @@ body>header {
 .square:nth-child(2) {
   background-color: red;
   z-index: 1;
-
 }
 
 .square:nth-child(3) {
   background-color: blue;
+  z-index: 1;
 }
 
 .square:nth-child(4) {
   background-color: yellow;
-
 }
 
 .circle {
   background-color: white;
-  width: 300px;
+  width: 50%;
   max-width: 100%;
-  height: 300px;
+  height: 50%;
   border-radius: 50%;
   align-self: center;
-  left: 30%;
-  opacity: .4;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.4;
   position: absolute;
+}
+
+form {
+  border: 2px solid black;
+  max-width: fit-content;
+  font-size: 20px;
+}
+
+.emailsList {
+  display: flex;
+  color: purple;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+
+label {
+  font-weight: bold;
+  color: purple;
+}
+
+input[type="text"] {
+  background-color: grey;
+}
+
+input[type="email"] {
+  background-color: grey;
+}
+
+::placeholder {
+  color: pink;
+}
+
+input[type="submit"] {
+  background-color: aqua;
+  cursor: crosshair;
+}
+
+input[type="submit"]:hover {
+  background-color: pink;
+  color: saddlebrown;
+}
+
+body>p {
+  display: flex;
+  font-size: 40pt;
+  margin-top: 10%;
+  color: white;
+  padding: 3cm;
+
+}
+
+#back-button {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  font-size: 20pt;
+}
+
+@media(max-width:1024px) {
+  * {
+    color: pink;
+    background-color: blue;
+  }
+
+  label {
+    color: red;
+  }
+}
+
+
+
+@media(max-width:480px) {
+  header {
+    color: pink;
+    background-color: black;
+  }
 }
